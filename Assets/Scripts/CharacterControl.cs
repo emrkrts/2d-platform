@@ -10,6 +10,8 @@ public class CharacterControl : MonoBehaviour
     float speedAmount = 5f;
     float jumpAmount = 8f;
 
+    //denemee
+
     void Start()
     {
         rgb = GetComponent<Rigidbody2D>();
