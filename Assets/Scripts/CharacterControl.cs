@@ -9,12 +9,10 @@ public class CharacterControl : MonoBehaviour
 
     float speedAmount = 5f;
     float jumpAmount = 8f;
-    bool alive;
 
     void Start()
     {
         rgb = GetComponent<Rigidbody2D>();
-        alive = true;
     }
     
     void Update()
@@ -48,6 +46,10 @@ public class CharacterControl : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Coins"))
+        {
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.CompareTag("Heals"))
         {
             Destroy(other.gameObject);
         }
